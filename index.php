@@ -60,10 +60,21 @@ elseif($status['result']['status']!='left'){
                         $texts = new Texts($user->getLanguage());
                         showMainPage();
                         break;
+                    case "➕Admin Qo'shish":
+                        showAdminName();
+                        break;
                     default:
                         showStart();
                         break;
                 }
+                break;
+            case "adminname":
+                $user->setAdminName($text);
+                showAdminId();
+                break;
+            case "adminId":
+                $user->setAdminId($text);
+                showAdmin();
                 break;
             case Pages::PAGE_MAIN:
                 switch ($text){
@@ -100,7 +111,20 @@ elseif($status['result']['status']!='left'){
 }else{
   is_channel("Kanalarimizga a'zo bo'ling ❌ ");
 }
-
+function showAdmin()
+{
+    sendMessage('salom');
+}
+function showAdminId(){
+    global $texts,$user;
+    $user->setPage('adminId');
+    sendMessage("Adminning ID sini kiriting");
+}
+function showAdminName(){
+     global $texts,$user;
+     $user->setPage('adminname');
+    sendMessage("Adminning ismini kiriting");
+}
 function is_channel($text,$edit=false){
     global $chatID,$telegram,$callback_query;
     $option = array(

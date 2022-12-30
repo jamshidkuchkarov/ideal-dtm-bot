@@ -114,7 +114,24 @@ class User
         return $this->getKeyValue('latitude');
 
     }
+    function setAdminName($name){
 
+            $this->setKeyValue('adminName',$name);
+
+    }
+    function getAdminName(){
+
+        $this->getKeyValue('adminName');
+    }
+    function setAdminId($id){
+
+        $this->setKeyValue('adminId',$id);
+
+    }
+    function getAdminId(){
+
+        $this->getKeyValue('adminId');
+    }
     function setLongitude($data)
     {
 

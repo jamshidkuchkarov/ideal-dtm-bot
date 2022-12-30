@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6496c024-6536-47d0-8b54-aad83e3aea9f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +17,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectId" id="2JRnHN6n638KNuTTqnQvjAfHpma" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -27,8 +33,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sammi/project" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -52,7 +59,7 @@
       <workItem from="1672311927594" duration="181000" />
       <workItem from="1672312111669" duration="11000" />
       <workItem from="1672312139303" duration="69000" />
-      <workItem from="1672312244064" duration="1554000" />
+      <workItem from="1672312244064" duration="7326000" />
     </task>
     <servers />
   </component>
