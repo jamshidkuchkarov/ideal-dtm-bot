@@ -12,7 +12,39 @@ class User
 
         if (!$this->isUserSet()) $this->makeUser();
     }
+    public function makeAdmin(){
+        global $db;
 
+        $admin_name = $this->getAdminName();
+        $admin_id  = $this->getAdminId();
+
+
+        $query = "insert into `admin`(name,chat_id) values('{$admin_name}',{$admin_id})";
+
+        if (!$db->query($query))
+
+            die("пользователя создать не удалось");
+
+    }
+    function setAdminName($name){
+
+        $this->setKeyValue('adminName',$name);
+
+    }
+    function getAdminName(){
+
+       return  $this->getKeyValue('adminName');
+    }
+    function setAdminId($id){
+
+      $this->setKeyValue('adminId',$id);
+
+    }
+    function getAdminId(){
+
+      return  $this->getKeyValue('adminId');
+
+    }
     private function makeUser()
     {
 
@@ -114,24 +146,7 @@ class User
         return $this->getKeyValue('latitude');
 
     }
-    function setAdminName($name){
 
-            $this->setKeyValue('adminName',$name);
-
-    }
-    function getAdminName(){
-
-        $this->getKeyValue('adminName');
-    }
-    function setAdminId($id){
-
-        $this->setKeyValue('adminId',$id);
-
-    }
-    function getAdminId(){
-
-        $this->getKeyValue('adminId');
-    }
     function setLongitude($data)
     {
 

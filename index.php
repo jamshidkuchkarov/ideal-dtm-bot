@@ -40,6 +40,12 @@ if ($callback_query !== null && $callback_query != '') {
         else{
             showStart();
         }
+    }elseif(isContains($callback_data,'good')){
+         $user->makeAdmin();
+        sendMessage("Admin Muvofaqiyatli qo'shildi");
+        showStart();
+    }elseif (isContains($callback_data,'wrong')){
+        showAdminName();
     }
 }
 elseif($status['result']['status']!='left'){
@@ -61,20 +67,25 @@ elseif($status['result']['status']!='left'){
                         showMainPage();
                         break;
                     case "➕Admin Qo'shish":
+                        //if condistiaalns admin no admin
                         showAdminName();
+                        break;
+                    case "➕Test qo'shish":
+                        $test_nomer = rand(1000,100000);
+                        sendMessage($test_nomer);
                         break;
                     default:
                         showStart();
                         break;
                 }
                 break;
-            case "adminname":
+            case Pages::ADMIN_NAME:
                 $user->setAdminName($text);
                 showAdminId();
                 break;
-            case "adminId":
+            case Pages::ADMIN_ID:
                 $user->setAdminId($text);
-                showAdmin();
+                showAdmin('Ma\'lumotni tekshirin!');
                 break;
             case Pages::PAGE_MAIN:
                 switch ($text){
@@ -90,19 +101,11 @@ elseif($status['result']['status']!='left'){
                 }
                 break;
             case Pages::PAGE_ADMIN:
-                $answer ="abcabcabc";
-                strtoupper($answer);
-                strtoupper($user);
-                $count = 0;
-                for($i=0;$i<strlen($answer);$i++){
-                    if($answer[$i]==$text[$i]){
-                        $count++;
-                    }
-                }
-                sendMessage($count);
-                $datetime = new DateTime();
-                sendMessage($datetime->format('F jS, Y'));
-
+              switch ($text){
+                  case $texts->getText("back_btn"):
+                      showStart();
+                      break;
+              }
                 break;
 
 
@@ -111,18 +114,33 @@ elseif($status['result']['status']!='left'){
 }else{
   is_channel("Kanalarimizga a'zo bo'ling ❌ ");
 }
-function showAdmin()
+function testShow(){
+
+}
+
+function showAdmin($text)
 {
-    sendMessage('salom');
+    global $chatID,$telegram,$callback_query,$user;
+    $user->setPage('tekshirish');
+    $option = array(
+        //First row
+        array($telegram->buildInlineKeyBoardButton("Ismi 👨🏼‍💻 :".$user->getAdminName(),'','gg'), $telegram->buildInlineKeyBoardButton(" Id 🆔 :".$user->getAdminId(),'','ggg')),
+        array($telegram->buildInlineKeyboardButton("To'gri ✅",'','good',),$telegram->buildInlineKeyBoardButton("Nato'g'ri ❌",'','wrong'))
+    );
+    $keyb = $telegram->buildInlineKeyBoard($option);
+        $content = array('chat_id' => $chatID, 'reply_markup' => $keyb, 'text' => $text);
+        $telegram->sendMessage($content);
+
+
 }
 function showAdminId(){
     global $texts,$user;
-    $user->setPage('adminId');
+    $user->setPage(Pages::ADMIN_ID);
     sendMessage("Adminning ID sini kiriting");
 }
 function showAdminName(){
      global $texts,$user;
-     $user->setPage('adminname');
+     $user->setPage(Pages::ADMIN_NAME);
     sendMessage("Adminning ismini kiriting");
 }
 function is_channel($text,$edit=false){

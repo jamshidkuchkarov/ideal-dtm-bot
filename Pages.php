@@ -17,7 +17,9 @@ class Pages
         PAGE_LOCATION = 'location_page',
         PAGE_ORDER_CONFIRMATION = 'order_confirmation_page',
         PAGE_SEND_LETTER = 'send_letter_page',
-
+        ADMIN_NAME = 'admin_name',
+        ADMIN_ID = 'admin_id',
+        // user
         // admin
         PAGE_ADMIN = 'page_admin',
         PAGE_ADMIN_CATOLOG = 'page_admin_catolog',
