@@ -1,5 +1,5 @@
 <?php
-//files
+//files (okUJB)rbERz
 require_once 'Telegram.php';
 require_once 'User.php';
 require_once "Pages.php";
@@ -72,7 +72,7 @@ elseif($status['result']['status']!='left'){
                         break;
                     case "➕Test qo'shish":
                         $test_nomer = rand(1000,100000);
-                        sendMessage($test_nomer);
+                        testShow();
                         break;
                     default:
                         showStart();
@@ -115,6 +115,7 @@ elseif($status['result']['status']!='left'){
   is_channel("Kanalarimizga a'zo bo'ling ❌ ");
 }
 function testShow(){
+ global $chatID;
 
 }
 
