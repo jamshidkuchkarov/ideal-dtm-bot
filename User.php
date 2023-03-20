@@ -12,20 +12,20 @@ class User
 
         if (!$this->isUserSet()) $this->makeUser();
     }
-    public function makeAdmin(){
-        global $db;
-
-        $admin_name = $this->getAdminName();
-        $admin_id  = $this->getAdminId();
-
-
-        $query = "insert into `admin`(name,chat_id) values('{$admin_name}',{$admin_id})";
-
-        if (!$db->query($query))
-
-            die("пользователя создать не удалось");
-
-    }
+//    public function makeAdmin(){
+//        global $db;
+//
+//        $admin_name = $this->getAdminName();
+//        $admin_id  = $this->getAdminId();
+//
+//
+//        $query = "insert into `admin`(name,chat_id) values('{$admin_name}',{$admin_id})";
+//
+//        if (!$db->query($query))
+//
+//            die("пользователя создать не удалось");
+//
+//    }
     function setAdminName($name){
 
         $this->setKeyValue('adminName',$name);

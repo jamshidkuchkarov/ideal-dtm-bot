@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="e724030d-4c91-4e8c-a82b-ddb96aaaf6ba" name="http://ftp.botuzrobot.uz" url="http://botuzrobot.uz">
-        <fileTransfer host="ftp.botuzrobot.uz" port="21">
+      <webServer id="03df3bf3-7919-4073-9868-46a2d5a823a3" name="a116152.hostde23.fornex.host" url="http://a116152.hostde23.fornex.host">
+        <fileTransfer host="a116152.hostde23.fornex.host" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

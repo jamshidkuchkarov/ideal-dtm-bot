@@ -25,7 +25,7 @@ $last_name = $telegram->LastName();
 
 $user = new User($chatID);
 $texts = new Texts($user->getLanguage());
-var_dump($texts->admins());
+
 $status = $telegram->getChatMember([
     "user_id" => $chatID,
     "chat_id" => "@suuuu_public"
@@ -40,12 +40,6 @@ if ($callback_query !== null && $callback_query != '') {
         else{
             showStart();
         }
-    }elseif(isContains($callback_data,'good')){
-         $user->makeAdmin();
-        sendMessage("Admin Muvofaqiyatli qo'shildi");
-        showStart();
-    }elseif (isContains($callback_data,'wrong')){
-        showAdminName();
     }
 }
 elseif($status['result']['status']!='left'){
@@ -66,91 +60,26 @@ elseif($status['result']['status']!='left'){
                         $texts = new Texts($user->getLanguage());
                         showMainPage();
                         break;
-                    case "➕Admin Qo'shish":
-                        //if condistiaalns admin no admin
-                        showAdminName();
-                        break;
-                    case "➕Test qo'shish":
-                        $test_nomer = rand(1000,100000);
-                        testShow();
-                        break;
                     default:
                         showStart();
                         break;
                 }
                 break;
-            case Pages::ADMIN_NAME:
-                $user->setAdminName($text);
-                showAdminId();
-                break;
-            case Pages::ADMIN_ID:
-                $user->setAdminId($text);
-                showAdmin('Ma\'lumotni tekshirin!');
-                break;
-            case Pages::PAGE_MAIN:
-                switch ($text){
-                    case $texts->getText('front'):
-                        showTestPage();
-                        break;
-                    case $texts->getText("back_btn"):
-                        showStart();
-                        break;
-                    default:
-                        showMainPage();
-                        break;
-                }
-                break;
-            case Pages::PAGE_ADMIN:
-              switch ($text){
-                  case $texts->getText("back_btn"):
-                      showStart();
-                      break;
-              }
-                break;
-
 
         }
     }
 }else{
-  is_channel("Kanalarimizga a'zo bo'ling ❌ ");
-}
-function testShow(){
- global $chatID;
-
+    is_channel("Kanalarimizga a'zo bo'ling ❌ ");
 }
 
-function showAdmin($text)
-{
-    global $chatID,$telegram,$callback_query,$user;
-    $user->setPage('tekshirish');
-    $option = array(
-        //First row
-        array($telegram->buildInlineKeyBoardButton("Ismi 👨🏼‍💻 :".$user->getAdminName(),'','gg'), $telegram->buildInlineKeyBoardButton(" Id 🆔 :".$user->getAdminId(),'','ggg')),
-        array($telegram->buildInlineKeyboardButton("To'gri ✅",'','good',),$telegram->buildInlineKeyBoardButton("Nato'g'ri ❌",'','wrong'))
-    );
-    $keyb = $telegram->buildInlineKeyBoard($option);
-        $content = array('chat_id' => $chatID, 'reply_markup' => $keyb, 'text' => $text);
-        $telegram->sendMessage($content);
 
-
-}
-function showAdminId(){
-    global $texts,$user;
-    $user->setPage(Pages::ADMIN_ID);
-    sendMessage("Adminning ID sini kiriting");
-}
-function showAdminName(){
-     global $texts,$user;
-     $user->setPage(Pages::ADMIN_NAME);
-    sendMessage("Adminning ismini kiriting");
-}
 function is_channel($text,$edit=false){
     global $chatID,$telegram,$callback_query;
     $option = array(
         //First row
         array($telegram->buildInlineKeyBoardButton("Button 1", $url="https://t.me/edu_ideal"), $telegram->buildInlineKeyBoardButton("Button 2", $url="http://t.me/suuuu_public")),
         array($telegram->buildInlineKeyboardButton("A'zo bo'ldim ✅",'','success'))
- );
+    );
     $keyb = $telegram->buildInlineKeyBoard($option);
     if($edit){
         $content = array('chat_id' => $chatID, 'message_id' => $callback_query['message']['message_id'], 'reply_markup' => $keyb, 'text' => $text);
@@ -162,17 +91,10 @@ function is_channel($text,$edit=false){
 
 
 }
-function showTestPage(){
-    global $texts,$user;
-    $user->setPage(Pages::PAGE_ADMIN);
-    sendMessage("Javoblarni shu ko'inishda jo'nating 9888|abca....");
-}
 
 function showMainPage(){
- global $texts,$user,$charID;
-    $user->setPage(Pages::PAGE_MAIN);
-    $button = [$texts->getText('front')];
-    sendTextWithKeyboard($button,$texts->getText('info'),true);
+    global $chatID,$user;
+    sendMessage('gandon suka');
 
 }
 function sendMessage($text)
@@ -185,15 +107,6 @@ function showStart()
     global $user,$texts,$chatID,$super_admin;
     $user->setPage(Pages::START);
     $buttons = ["🇷🇺 Русский", "🇺🇿 O'zbekcha"];
-    foreach ($texts->admins() as $item){
-       if($item == $chatID){
-           if($chatID == $super_admin){
-               $buttons[]="➕Admin Qo'shish";
-           }
-            $buttons[] = "➕Test qo'shish";
-        }
-    }
-
     $textToSend = "Пожалуйста выберите язык. 👇\n\nIltimos, tilni tanlang. 👇";
     sendTextWithKeyboard($buttons, $textToSend);
 }

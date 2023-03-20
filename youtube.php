@@ -1,6 +1,6 @@
 <?php
 $admin = "1814409422";
-$token = '5937101541:AAHgfU-BZMZ0JzVsBrVIueUAmlduDk64qYw';
+$token = '5486259319:AAEIB-ix0pJsj1CVBzZE3304qiyvtlgJvBs';
 $mybot="MathsOnlineBot";
 
 function bot($method,$datas=[]){
