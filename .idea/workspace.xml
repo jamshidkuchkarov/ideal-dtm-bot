@@ -2,27 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6496c024-6536-47d0-8b54-aad83e3aea9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ideal_bot/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xususiy/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ideal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ideal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/Texts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/db_connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/db_connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideal_bot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube.php" beforeDir="false" afterPath="$PROJECT_DIR$/youtube.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/longmen/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
@@ -31,6 +43,21 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/longmen/vendor/composer" />
+      <path value="$PROJECT_DIR$/longmen/vendor/longman/telegram-bot" />
+      <path value="$PROJECT_DIR$/longmen/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/longmen/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/longmen/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/longmen/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/longmen/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/longmen/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/longmen/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/longmen/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/longmen/vendor/guzzlehttp/guzzle" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="2JRnHN6n638KNuTTqnQvjAfHpma" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,6 +72,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Bo'shliq\ideal\xususiy" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,7 +111,37 @@
       <workItem from="1673426806621" duration="14000" />
       <workItem from="1673462366559" duration="34000" />
       <workItem from="1679201030316" duration="4410000" />
-      <workItem from="1679240664501" duration="5099000" />
+      <workItem from="1679240664501" duration="5134000" />
+      <workItem from="1679319277839" duration="324000" />
+      <workItem from="1679411064159" duration="314000" />
+      <workItem from="1679656308750" duration="1378000" />
+      <workItem from="1679915613792" duration="1087000" />
+      <workItem from="1679917448684" duration="583000" />
+      <workItem from="1680449612709" duration="658000" />
+      <workItem from="1680514746751" duration="290000" />
+      <workItem from="1680527311275" duration="8000" />
+      <workItem from="1681357483682" duration="35000" />
+      <workItem from="1681997311777" duration="1000" />
+      <workItem from="1681997321116" duration="1514000" />
+      <workItem from="1682052473041" duration="14000" />
+      <workItem from="1682763137229" duration="1299000" />
+      <workItem from="1682767095910" duration="1122000" />
+      <workItem from="1682768309213" duration="10868000" />
+      <workItem from="1682831734847" duration="15744000" />
+      <workItem from="1682849789599" duration="3423000" />
+      <workItem from="1682869780248" duration="131000" />
+      <workItem from="1682918473660" duration="3330000" />
+      <workItem from="1682956373227" duration="1634000" />
+      <workItem from="1683010397134" duration="11000" />
+      <workItem from="1683097472750" duration="1266000" />
+      <workItem from="1683131420961" duration="3053000" />
+      <workItem from="1683163720862" duration="501000" />
+      <workItem from="1683170775609" duration="141000" />
+      <workItem from="1683175209226" duration="296000" />
+      <workItem from="1683186308968" duration="57000" />
+      <workItem from="1683691640451" duration="942000" />
+      <workItem from="1683694096359" duration="2606000" />
+      <workItem from="1684606407132" duration="499000" />
     </task>
     <servers />
   </component>

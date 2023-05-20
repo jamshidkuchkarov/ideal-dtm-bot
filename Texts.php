@@ -8,15 +8,15 @@ class Texts
     {
         $this->lang = $lang;
     }
-//    function admins(){
-//        global $db;
-//        $res = [];
-//        $result = $db->query("SELECT*FROM `admin`");
-//        while ($arr = $result->fetch_assoc()){
-//            $res[] = $arr['chat_id'];
-//        }
-//        return $res;
-//    }
+    function admins(){
+        global $db;
+        $res = [];
+        $result = $db->query("SELECT*FROM `admin`");
+        while ($arr = $result->fetch_assoc()){
+            $res[] = $arr['chat_id'];
+        }
+        return $res;
+    }
     function getText($keyword)
     {
         global $db;

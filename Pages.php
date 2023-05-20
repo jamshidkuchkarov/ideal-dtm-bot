@@ -5,7 +5,16 @@ class Pages
 {
     const
         START = 'start',
-
+        JOB='job',
+        FULL_NAME='name',
+        MAP = 'map',
+        YEAR = 'year',
+        SUBJECT_YEAR = 'subject_year',
+        COURSE = 'course',
+        PHONE = 'phone',
+        REGISTRED = 'registred',
+        ADD_PHONE = 'add_phone',
+        SHOW_LANG= 'show_lang',
         // user
         PAGE_MAIN = 'page_main',
         PAGE_CATALOG = 'page_catalog',
@@ -19,6 +28,7 @@ class Pages
         PAGE_SEND_LETTER = 'send_letter_page',
         ADMIN_NAME = 'admin_name',
         ADMIN_ID = 'admin_id',
+        PAGE_UNI = 'university',
         // user
         // admin
         PAGE_ADMIN = 'page_admin',

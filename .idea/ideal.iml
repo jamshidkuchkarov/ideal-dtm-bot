@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/longman/telegram-bot" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/longmen/vendor/guzzlehttp/guzzle" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

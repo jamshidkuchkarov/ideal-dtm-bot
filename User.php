@@ -26,23 +26,75 @@ class User
 //            die("пользователя создать не удалось");
 //
 //    }
-    function setAdminName($name){
+    function setShowLang($data)
+    {
 
-        $this->setKeyValue('adminName',$name);
-
-    }
-    function getAdminName(){
-
-       return  $this->getKeyValue('adminName');
-    }
-    function setAdminId($id){
-
-      $this->setKeyValue('adminId',$id);
+        $this->setKeyValue('showlang', $data);
 
     }
-    function getAdminId(){
 
-      return  $this->getKeyValue('adminId');
+    function getShowLang()
+    {
+
+        return $this->getKeyValue('showlang');
+
+    }
+    function setAddPhone($data)
+    {
+
+        $this->setKeyValue('addPhone', $data);
+
+    }
+
+    function getAddPhone()
+    {
+
+        return $this->getKeyValue('addPhone');
+
+    }
+    function setSubject($data)
+    {
+
+        $this->setKeyValue('subject', $data);
+
+    }
+
+    function getSubject()
+    {
+
+        return $this->getKeyValue('subject');
+
+    }
+    function setMap($data)
+    {
+
+        $this->setKeyValue('map', $data);
+
+    }
+
+    function getMap()
+    {
+
+        return $this->getKeyValue('map');
+
+    }
+    function setUniver($name){
+
+        $this->setKeyValue('university',$name);
+
+    }
+    function getUniver(){
+
+       return  $this->getKeyValue('university');
+    }
+    function setYear($year){
+
+      $this->setKeyValue('year',$year);
+
+    }
+    function getYear(){
+
+      return  $this->getKeyValue('year');
 
     }
     private function makeUser()
@@ -133,31 +185,31 @@ class User
 
     }
 
-    function setLatitude($data)
+    function setYearSubject($data)
     {
 
-        $this->setKeyValue('latitude', $data);
+        $this->setKeyValue('subject_year', $data);
 
     }
 
-    function getLatitude()
+    function getYearSubject()
     {
 
-        return $this->getKeyValue('latitude');
+        return $this->getKeyValue('subject_year');
 
     }
 
-    function setLongitude($data)
+    function setCourse($data)
     {
 
-        $this->setKeyValue('longitude', $data);
+        $this->setKeyValue('course', $data);
 
     }
 
-    function getLongitude()
+    function getCourse()
     {
 
-        return $this->getKeyValue('longitude');
+        return $this->getKeyValue('course');
 
     }
     function setPhoneNumber($phoneNumber)
@@ -193,17 +245,17 @@ class User
 
     }
 
-    function setOrderText($data)
+    function setZavuchYear($data)
     {
 
-        $this->setKeyValue('orderText', $data);
+        $this->setKeyValue('zavuch_year', $data);
 
     }
 
-    function getOrderText()
+    function getZavuchYear()
     {
 
-        return $this->getKeyValue('orderText');
+        return $this->getKeyValue('zavuch_year');
 
     }
     function getOrderType()
@@ -279,4 +331,16 @@ class User
         return $res;
 
     }
+    public function getUsers(){
+        global $db;
+        $res = array();
+        $result = $db->query("select*from `users`");
+        while($row = $result->fetch_assoc()) {
+            if(isset($row['data_json']) && isset($row['chatID'])){
+                array_push($res,$row);
+            }
+        }
+        return $res;
+    }
+
 }
